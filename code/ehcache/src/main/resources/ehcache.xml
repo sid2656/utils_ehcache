@@ -22,9 +22,9 @@
 	<defaultCache maxElementsInMemory="10000" eternal="false"
 		timeToIdleSeconds="600" timeToLiveSeconds="600" diskSpoolBufferSizeMB="30"
 		maxElementsOnDisk="10000000" diskExpiryThreadIntervalSeconds="120">
-		<cacheDecoratorFactory class="com.hdsx.taxi.driver.cq.cache.DecoratedCacheFactory"  
+		<cacheDecoratorFactory class="utils.cache.ehcache.factory.DecoratedCacheFactory"  
 		      properties="cacheName=default" />
-		<cacheExceptionHandlerFactory class="com.hdsx.taxi.driver.cq.cache.ExceptionHandlerCacheFactory"
+		<cacheExceptionHandlerFactory class="utils.cache.ehcache.factory.ExceptionHandlerCacheFactory"
               properties="cacheName=default"/>
 		<persistence strategy="localTempSwap" />
 	</defaultCache>
@@ -33,11 +33,11 @@
 		maxElementsOnDisk="0" eternal="false" overflowToDisk="false"
 		timeToIdleSeconds="600" timeToLiveSeconds="600" diskPersistent="false"
 		memoryStoreEvictionPolicy="LFU">
-		<cacheDecoratorFactory class="com.hdsx.taxi.driver.cq.cache.DecoratedCacheFactory"  
+		<cacheDecoratorFactory class="utils.cache.ehcache.factory.DecoratedCacheFactory"  
 		      properties="cacheName=msgcache"/>
-		<cacheExceptionHandlerFactory class="com.hdsx.taxi.driver.cq.cache.ExceptionHandlerCacheFactory"
+		<cacheExceptionHandlerFactory class="utils.cache.ehcache.factory.ExceptionHandlerCacheFactory"
               properties="cacheName=msgcache"/>
-		<!-- 暂时没有用到，先注释 <cacheEventListenerFactory class="com.hdsx.taxi.driver.cq.cache.MainCacheEventListenerFactory" 
+		<!-- 暂时没有用到，先注释 <cacheEventListenerFactory class="utils.cache.ehcache.factory.MainCacheEventListenerFactory" 
 			properties="cacheName=msgCache" /> -->
 
 	</cache>
@@ -46,9 +46,9 @@
 		maxElementsOnDisk="0" eternal="false" overflowToDisk="true"
 		timeToIdleSeconds="6000" timeToLiveSeconds="6000" diskPersistent="true"
 		diskSpoolBufferSizeMB="1024" memoryStoreEvictionPolicy="LFU">
-		<cacheDecoratorFactory class="com.hdsx.taxi.driver.cq.cache.DecoratedCacheFactory"  
+		<cacheDecoratorFactory class="utils.cache.ehcache.factory.DecoratedCacheFactory"  
 		      properties="cacheName=ordercache" />
-		<cacheExceptionHandlerFactory class="com.hdsx.taxi.driver.cq.cache.ExceptionHandlerCacheFactory"
+		<cacheExceptionHandlerFactory class="utils.cache.ehcache.factory.ExceptionHandlerCacheFactory"
               properties="cacheName=ordercache"/>
 
 	</cache>
@@ -57,9 +57,9 @@
 		maxElementsOnDisk="0" eternal="false" overflowToDisk="true"
 		timeToIdleSeconds="6000" timeToLiveSeconds="6000" diskPersistent="true"
 		diskSpoolBufferSizeMB="1024" memoryStoreEvictionPolicy="LFU">
-		<cacheDecoratorFactory class="com.hdsx.taxi.driver.cq.cache.DecoratedCacheFactory"  
+		<cacheDecoratorFactory class="utils.cache.ehcache.factory.DecoratedCacheFactory"  
 		      properties="cacheName=orderstatecache" />
-		<cacheExceptionHandlerFactory class="com.hdsx.taxi.driver.cq.cache.ExceptionHandlerCacheFactory"
+		<cacheExceptionHandlerFactory class="utils.cache.ehcache.factory.ExceptionHandlerCacheFactory"
               properties="cacheName=orderstatecache"/>
 
 	</cache>
@@ -68,9 +68,9 @@
 		maxElementsOnDisk="0" eternal="false" overflowToDisk="true"
 		timeToIdleSeconds="864000" timeToLiveSeconds="864000" diskPersistent="true"
 		diskSpoolBufferSizeMB="1024" memoryStoreEvictionPolicy="LFU">
-		<cacheDecoratorFactory class="com.hdsx.taxi.driver.cq.cache.DecoratedCacheFactory"  
+		<cacheDecoratorFactory class="utils.cache.ehcache.factory.DecoratedCacheFactory"  
 		      properties="cacheName=driverordersuccesscache" />
-		<cacheExceptionHandlerFactory class="com.hdsx.taxi.driver.cq.cache.ExceptionHandlerCacheFactory"
+		<cacheExceptionHandlerFactory class="utils.cache.ehcache.factory.ExceptionHandlerCacheFactory"
               properties="cacheName=driverordersuccesscache"/>
 
 	</cache>
@@ -79,9 +79,9 @@
 		maxElementsOnDisk="0" eternal="false" overflowToDisk="true"
 		timeToIdleSeconds="864000" timeToLiveSeconds="864000" diskPersistent="true"
 		diskSpoolBufferSizeMB="1024" memoryStoreEvictionPolicy="LFU">
-		<cacheDecoratorFactory class="com.hdsx.taxi.driver.cq.cache.DecoratedCacheFactory"  
+		<cacheDecoratorFactory class="utils.cache.ehcache.factory.DecoratedCacheFactory"  
 		      properties="cacheName=driveracceptordercache" />
-		<cacheExceptionHandlerFactory class="com.hdsx.taxi.driver.cq.cache.ExceptionHandlerCacheFactory"
+		<cacheExceptionHandlerFactory class="utils.cache.ehcache.factory.ExceptionHandlerCacheFactory"
               properties="cacheName=driveracceptordercache"/>
 
 	</cache>
@@ -90,9 +90,9 @@
 		maxElementsOnDisk="0" eternal="false" overflowToDisk="true"
 		timeToIdleSeconds="864000" timeToLiveSeconds="864000" diskPersistent="true"
 		diskSpoolBufferSizeMB="1024" memoryStoreEvictionPolicy="LFU">
-		<cacheDecoratorFactory class="com.hdsx.taxi.driver.cq.cache.DecoratedCacheFactory"  
+		<cacheDecoratorFactory class="utils.cache.ehcache.factory.DecoratedCacheFactory"  
 		      properties="cacheName=driverstatecache" />
-		<cacheExceptionHandlerFactory class="com.hdsx.taxi.driver.cq.cache.ExceptionHandlerCacheFactory"
+		<cacheExceptionHandlerFactory class="utils.cache.ehcache.factory.ExceptionHandlerCacheFactory"
               properties="cacheName=driverstatecache"/>
 	</cache>
 
@@ -100,9 +100,9 @@
 		maxElementsOnDisk="0" eternal="false" overflowToDisk="true"
 		timeToIdleSeconds="864000" timeToLiveSeconds="864000" diskPersistent="true"
 		diskSpoolBufferSizeMB="1024" memoryStoreEvictionPolicy="LFU">
-		<cacheDecoratorFactory class="com.hdsx.taxi.driver.cq.cache.DecoratedCacheFactory"  
+		<cacheDecoratorFactory class="utils.cache.ehcache.factory.DecoratedCacheFactory"  
 		      properties="cacheName=driverplatenumcache" />
-		<cacheExceptionHandlerFactory class="com.hdsx.taxi.driver.cq.cache.ExceptionHandlerCacheFactory"
+		<cacheExceptionHandlerFactory class="utils.cache.ehcache.factory.ExceptionHandlerCacheFactory"
               properties="cacheName=driverplatenumcache"/>
 	</cache>
 
@@ -110,9 +110,9 @@
 		maxElementsOnDisk="0" eternal="false" overflowToDisk="true"
 		timeToIdleSeconds="864000" timeToLiveSeconds="864000" diskPersistent="true"
 		diskSpoolBufferSizeMB="1024" memoryStoreEvictionPolicy="LFU">
-		<cacheDecoratorFactory class="com.hdsx.taxi.driver.cq.cache.DecoratedCacheFactory"  
+		<cacheDecoratorFactory class="utils.cache.ehcache.factory.DecoratedCacheFactory"  
 		      properties="cacheName=driveronlinestatecache" />
-		<cacheExceptionHandlerFactory class="com.hdsx.taxi.driver.cq.cache.ExceptionHandlerCacheFactory"
+		<cacheExceptionHandlerFactory class="utils.cache.ehcache.factory.ExceptionHandlerCacheFactory"
               properties="cacheName=driveronlinestatecache"/>
 
 	</cache>
@@ -120,9 +120,9 @@
 		maxElementsOnDisk="0" eternal="true" overflowToDisk="false"
 		timeToIdleSeconds="120" timeToLiveSeconds="0" diskPersistent="false"
 		memoryStoreEvictionPolicy="LFU">
-		<cacheDecoratorFactory class="com.hdsx.taxi.driver.cq.cache.DecoratedCacheFactory"  
+		<cacheDecoratorFactory class="utils.cache.ehcache.factory.DecoratedCacheFactory"  
 		      properties="cacheName=treecache" />
-		<cacheExceptionHandlerFactory class="com.hdsx.taxi.driver.cq.cache.ExceptionHandlerCacheFactory"
+		<cacheExceptionHandlerFactory class="utils.cache.ehcache.factory.ExceptionHandlerCacheFactory"
               properties="cacheName=treecache"/>
 
 	</cache>
@@ -132,9 +132,9 @@
 		maxElementsOnDisk="0" eternal="true" overflowToDisk="true"
 		timeToIdleSeconds="120" timeToLiveSeconds="0" diskPersistent="true"
 		diskSpoolBufferSizeMB="1024" memoryStoreEvictionPolicy="LFU">
-		<cacheDecoratorFactory class="com.hdsx.taxi.driver.cq.cache.DecoratedCacheFactory"  
+		<cacheDecoratorFactory class="utils.cache.ehcache.factory.DecoratedCacheFactory"  
 		      properties="cacheName=trackcache" />
-		<cacheExceptionHandlerFactory class="com.hdsx.taxi.driver.cq.cache.ExceptionHandlerCacheFactory"
+		<cacheExceptionHandlerFactory class="utils.cache.ehcache.factory.ExceptionHandlerCacheFactory"
               properties="cacheName=trackcache"/>
 
 	</cache>
@@ -144,9 +144,9 @@
 		maxElementsOnDisk="0" eternal="true" overflowToDisk="true"
 		timeToIdleSeconds="864000" timeToLiveSeconds="864000" diskPersistent="true"
 		diskSpoolBufferSizeMB="1024" memoryStoreEvictionPolicy="LFU">
-		<cacheDecoratorFactory class="com.hdsx.taxi.driver.cq.cache.DecoratedCacheFactory"  
+		<cacheDecoratorFactory class="utils.cache.ehcache.factory.DecoratedCacheFactory"  
 		      properties="cacheName=carpasitioncache" />
-		<cacheExceptionHandlerFactory class="com.hdsx.taxi.driver.cq.cache.ExceptionHandlerCacheFactory"
+		<cacheExceptionHandlerFactory class="utils.cache.ehcache.factory.ExceptionHandlerCacheFactory"
               properties="cacheName=carpasitioncache"/>
 
 	</cache> -->
